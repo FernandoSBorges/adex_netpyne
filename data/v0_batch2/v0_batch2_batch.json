@@ -1,0 +1,29 @@
+{
+    "batch": {
+        "batchLabel": "v0_batch2",
+        "cfgFile": "cfg.py",
+        "evolCfg": {
+            "fitnessFunc": "removed"
+        },
+        "initCfg": {},
+        "method": "grid",
+        "netParamsFile": "netParams.py",
+        "params": [
+            {
+                "label": "gsyn",
+                "values": [
+                    2.9e-06
+                ]
+            }
+        ],
+        "runCfg": {
+            "cores": 7,
+            "mpiCommand": "mpiexec --use-hwthread-cpus",
+            "script": "init.py",
+            "skip": true,
+            "type": "mpi_direct"
+        },
+        "saveFolder": "../data/v0_batch2",
+        "seed": null
+    }
+}

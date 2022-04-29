@@ -1,0 +1,202 @@
+{
+    "simConfig": {
+        "IClamp": [
+            {
+                "amp": 0.0025,
+                "dur": 100000,
+                "loc": 0.5,
+                "pop": "E",
+                "sec": "soma",
+                "start": 0
+            },
+            {
+                "amp": 0.0025,
+                "dur": 100000,
+                "loc": 0.5,
+                "pop": "I",
+                "sec": "soma",
+                "start": 0
+            }
+        ],
+        "IClampnumber": 2,
+        "addIClamp": false,
+        "addSynMechs": true,
+        "allowConnsWithWeight0": true,
+        "allowSelfConns": false,
+        "allpops": [
+            "E",
+            "I"
+        ],
+        "analysis": {
+            "plotRaster": {
+                "dpi": 300,
+                "figSize": [
+                    24,
+                    12
+                ],
+                "fontSize": 8,
+                "orderInverse": true,
+                "saveFig": true,
+                "showFig": false,
+                "timeRange": [
+                    0,
+                    20000.0
+                ]
+            },
+            "plotTraces": {
+                "figSize": [
+                    24,
+                    24
+                ],
+                "include": [
+                    [
+                        "E",
+                        0
+                    ],
+                    [
+                        "E",
+                        1
+                    ],
+                    [
+                        "E",
+                        2
+                    ],
+                    [
+                        "I",
+                        0
+                    ],
+                    [
+                        "I",
+                        1
+                    ],
+                    [
+                        "I",
+                        2
+                    ]
+                ],
+                "oneFigPer": "trace",
+                "overlay": false,
+                "saveFig": true,
+                "showFig": false,
+                "timeRange": [
+                    0,
+                    20000.0
+                ],
+                "ylim": [
+                    -70,
+                    -35
+                ]
+            }
+        },
+        "backupCfgFile": null,
+        "cache_efficient": true,
+        "cellsrec": 2,
+        "checkErrors": false,
+        "compactConnFormat": false,
+        "connRandomSecFromList": true,
+        "coreneuron": false,
+        "createNEURONObj": true,
+        "createPyStruct": true,
+        "cvode_active": false,
+        "cvode_atol": 1e-06,
+        "distributeSynsUniformly": true,
+        "dt": 0.005,
+        "duration": 20000.0,
+        "filename": "model_output",
+        "gatherOnlySimData": false,
+        "gpu": false,
+        "gsyn": 2.9e-06,
+        "hParams": {
+            "celsius": 34,
+            "v_init": -65
+        },
+        "includeParamsLabel": false,
+        "invertedYCoord": true,
+        "oneSynPerNetcon": true,
+        "printPopAvgRates": true,
+        "printRunTime": 0.2,
+        "printSynsAfterRule": false,
+        "pt3dRelativeToCellLocation": true,
+        "rand123GlobalIndex": null,
+        "random123": false,
+        "recordCells": [
+            [
+                "E",
+                0
+            ],
+            [
+                "E",
+                1
+            ],
+            [
+                "E",
+                2
+            ],
+            [
+                "I",
+                0
+            ],
+            [
+                "I",
+                1
+            ],
+            [
+                "I",
+                2
+            ]
+        ],
+        "recordCellsSpikes": -1,
+        "recordDipole": false,
+        "recordDipolesHNN": false,
+        "recordLFP": [],
+        "recordStep": 0.005,
+        "recordStim": false,
+        "recordTime": false,
+        "recordTraces": {
+            "V_soma": {
+                "loc": 0.5,
+                "sec": "soma",
+                "var": "v"
+            }
+        },
+        "rootFolder": "/home/fernando/Downloads/adex-main/sim",
+        "saveCSV": false,
+        "saveCellConns": false,
+        "saveCellSecs": false,
+        "saveDat": false,
+        "saveDataInclude": [
+            "simData",
+            "simConfig",
+            "netParams",
+            "net"
+        ],
+        "saveDipoleCells": false,
+        "saveDipolePops": false,
+        "saveDpk": false,
+        "saveFolder": "../data/v0_batch2",
+        "saveHDF5": false,
+        "saveJson": false,
+        "saveLFPCells": false,
+        "saveLFPPops": false,
+        "saveMat": false,
+        "savePickle": true,
+        "saveTiming": false,
+        "scale": 1.0,
+        "scaleDensity": 1.0,
+        "seeds": {
+            "conn": 4322,
+            "loc": 4322,
+            "stim": 4322
+        },
+        "simLabel": "v0_batch2_0",
+        "sizeX": 50.0,
+        "sizeY": 100.0,
+        "sizeZ": 50.0,
+        "timestampFilename": false,
+        "timing": true,
+        "tstop": 1000.0,
+        "use_fast_imem": false,
+        "validateNetParams": false,
+        "verbose": false
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "Tonic spiking": {
+    "gl": 10,
+    "deltaT": 2, 
+    "tauk": 30,
+    "a":2, 
+    "b":0, 
+    "E_l":-70, 
+    "I_ext":0, 
+    "C":200, 
+    "V_reset":-58,
+    "V_T":-50
+  },
+  "adaptation": {
+    "gl": 12,
+    "deltaT": 2, 
+    "tauk": 300,
+    "a":2, 
+    "b":60, 
+    "E_l":-70, 
+    "I_ext":0, 
+    "C":200, 
+    "V_reset":-58,
+    "V_T":-50
+  },
+  "Initial Burst": {
+    "gl": 18,
+    "deltaT": 2, 
+    "tauk": 150,
+    "a":4, 
+    "b":120, 
+    "E_l":-58, 
+    "I_ext":0, 
+    "C":130, 
+    "V_reset":-50,
+    "V_T":-50
+  }
+  
+}
