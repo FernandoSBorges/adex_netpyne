@@ -23,10 +23,10 @@ cfg = specs.SimConfig()
 #------------------------------------------------------------------------------
 # Run parameters
 #------------------------------------------------------------------------------
-cfg.duration = 2.0*1e4 ## Duration of the sim, in ms  
+cfg.duration = 3.0*1e4 ## Duration of the sim, in ms  
 cfg.dt = 0.005
-cfg.seeds = {'conn': 4322, 'stim': 4322, 'loc': 4322} 
-cfg.hParams = {'celsius': 34, 'v_init': -65}  
+cfg.seeds = {'conn': 1, 'stim': 1, 'loc': 1} 
+cfg.hParams = {'celsius': 34, 'v_init': -60}  
 cfg.verbose = False
 cfg.createNEURONObj = True
 cfg.createPyStruct = True  
@@ -51,10 +51,10 @@ cfg.allpops = ['E','I']
 cfg.cellsrec = 2
 if cfg.cellsrec == 0:  cfg.recordCells = cfg.allpops # record all cells
 elif cfg.cellsrec == 1: cfg.recordCells = [(pop,0) for pop in cfg.allpops] # record one cell of each pop
-elif cfg.cellsrec == 2: # record 3 cells of each pop
+elif cfg.cellsrec == 2: # record 10 cells of each pop
     cfg.recordCells = []
     for pop in cfg.allpops:
-        for number in range(3):
+        for number in range(10):
                 cfg.recordCells.append((pop,number))
                 
 cfg.recordTraces = {'V_soma': {'sec':'soma', 'loc':0.5, 'var':'v'}}  ## Dict with traces to record
@@ -79,9 +79,9 @@ cfg.saveCellConns = False
 #------------------------------------------------------------------------------
 # Analysis and plotting 
 # ------------------------------------------------------------------------------
-cfg.analysis['plotRaster'] = {'saveFig': True, 'showFig': False, 'orderInverse': True, 'timeRange': [0,cfg.duration], 'figSize': (24,12), 'fontSize':8, 'dpi': 300} 
+cfg.analysis['plotRaster'] = {'saveFig': True, 'showFig': False, 'orderInverse': True, 'timeRange': [0,cfg.duration], 'figSize': (48,24), 'fontSize':8, 'dpi': 100} 
 # cfg.analysis['plot2Dnet']   = {'include': cfg.allpops, 'saveFig': True, 'showConns': False, 'figSize': (12,12), 'fontSize':16}   # Plot 2D cells xy
-cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'oneFigPer': 'trace', 'overlay': False, 'timeRange': [0,cfg.duration], 'ylim': [-70,-35], 'saveFig': True, 'showFig': False, 'figSize':(24,24)}
+cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'oneFigPer': 'trace', 'overlay': False, 'timeRange': [0,cfg.duration], 'ylim': [-70,-35], 'saveFig': True, 'showFig': False, 'figSize':(48,48)}
 # cfg.analysis['plotShape'] = {'includePre': cfg.recordCells, 'includePost': cfg.recordCells, 'showFig': False, 'includeAxon': False, 
 #                             'showSyns': False, 'saveFig': True, 'dist': 0.55, 'cvar': 'voltage', 'figSize': (6,6), 'dpi': 300}
 #------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ cfg.sizeX = 50.0 # um
 cfg.sizeZ = 50.0
 cfg.scaleDensity = 1.0 # Number of cells
 
-cfg.gsyn = 0.000002
+cfg.gsyn = 0.0000028
 #------------------------------------------------------------------------------
 # Current inputs 
 #------------------------------------------------------------------------------

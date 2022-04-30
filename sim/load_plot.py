@@ -18,8 +18,8 @@ if __name__ == '__main__':
     dataType = 'spont' #'speech' #'spont'
 
     if dataType == 'spont':
-        filenames = ['../data/v0_batch2/v0_batch2_%d_data.pkl' % (iseed) for iseed in [0] ]
-        timeRange = [5500, 6500]
+        filenames = ['../data/v0_batch1/v0_batch1_%d_data.pkl' % (iseed) for iseed in [0] ]
+        timeRange = [8000, 9000]
 
     allData = []
 
